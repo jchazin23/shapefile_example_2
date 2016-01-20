@@ -23,7 +23,7 @@ map.final = join(gdp,area.map, by = "provinces")
 colnames(map.final)[4] = "Nom"
 map.final = map.final[which(map.final$provinces != 'Mainland China'),]
 
-svg("China.svg",width=15,height=10.5)
+svg("China.svg",width=11.25,height=7.875)
 ggplot(map.final, aes(x = long, y = lat, group = group, fill = Nom)) +
   geom_polygon(color = "black", size = 0.25, aes(group = group)) + theme_minimal() +
   ylab('Latitude (Deg)') + xlab('Longitude (Deg)') + ggtitle("Nominal GDP Per Capita by Chinese Administrative Division") +
